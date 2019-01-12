@@ -1,0 +1,18 @@
+body{margin:0px;background-color:#151515;color:white;font-size:14px;*text-align:center;}
+.index_body{margin:0 auto;width:972px;}
+.index_body .list_bg{width:100%;height:516px;margin-top:30px;}
+.index_body .list_bg	 .bg_1{height:516px;width:25px;background:url('../nimg/listleft.jpg') no-repeat;float:left;}
+.index_body .list_bg	 .bg_2{height:516px;width:918px;background:url('../nimg/listbg.jpg') repeat-x;float:left;text-align:left;}
+.index_body .list_bg	 .bg_2 span{font-weight:bold;margin-left:30px;}
+.index_body .list_bg	 .bg_2  .newscontentinfo{width:70%;text-align:left;line-height:24px;margin-left:30px;height:360px;}
+.index_body .list_bg	 .bg_2 .newscontentinfo a{text-decoration:none;color:#ADADAD;font-size:12px;background:url('../nimg/tb_12.png')  no-repeat left center;font-family:'Î¢ÈíÑÅºÚ';padding-left:5px;}
+.index_body .list_bg	 .bg_2 .newscontentinfo a:hover{text-decoration:none;color:white;font-size:12px;font-family:'Î¢ÈíÑÅºÚ';padding-left:5px;}
+.index_body .list_bg	 .bg_2 .nowfenpage{width:70%;text-align:left;line-height:24px;height:24px;margin-left:30px;}
+.index_body .list_bg	 .bg_2 .nowfenpage a{text-decoration:none;color:#ADADAD;font-size:12px;}
+.index_body .list_bg	 .bg_2 .nowfenpage a:hover{text-decoration:none;color:white;font-size:12px;}
+
+
+.index_body .list_bg	 .bg_3{height:516px;width:28px;background:url('../nimg/listright.jpg') no-repeat;float:left;}
+
+
+

@@ -1,0 +1,247 @@
+			body{margin:0 auto;text-align:center;background:url('../images/bg_hr.jpg')  repeat-y black center top;width:100% auto;font-size:12px;font-family:'宋体';}
+			a:hover{color:white;}
+			.index_body{width:100% auto;overflow:auto;text-align:center; margin:0 auto;}
+
+			.index_body .index_body_all{width:973px;height:100%;margin:0 auto;}
+
+			.index_body .index_body_all .index_top{width:250px;height:33px;background:url('../images/toptitle.jpg');line-height:28px;color:white;}
+
+			/*这里是中间背景层*/
+			.index_body .index_body_all .index_center{margin:0 auto;background:url('../images/body_bg.jpg') repeat-y;margin-top:54px;text-align:center;}
+
+
+			.index_body .index_body_all .index_center .index_center_top
+			{
+				width:972px;
+				text-align:center;
+				margin-left:1px;
+				height:42px;
+				background:url('../images/btn_list.jpg') no-repeat;
+			}
+			.index_body .index_body_all .index_center .index_center_top ul
+			{
+				background:url('../images/title_list.jpg') no-repeat;
+				padding:0;
+				margin:4 2;
+				width:972px;
+				float:left;
+			}
+			.index_body .index_body_all .index_center .index_center_top ul li
+			{
+				 float:left;
+				 width:119px;
+				 height:35px;
+				 margin-top:4px;
+				 line-height:32px;
+				 font-size:10px;
+				 text-align:left;
+			}
+				.index_body .index_body_all .index_center .index_center_top .index_center_top_div
+			{
+				 width:178px;
+				 height:43px;
+				 background:url('../images/crazyflasehrlogo.png') no-repeat;
+				 margin-top:-35px;
+				 margin-left:20px;
+				 z-index:99;
+				 color:#939393;
+				 font-size:12px;
+				 font-weight:bold;
+				 font-family:'黑体';
+				 text-align:center;
+				 position:relative;
+				 _background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=image,src="../images/crazyflasehrlogo.png");
+			}
+				.index_body .index_body_all .index_center .index_center_top .index_center_top_divs
+			{
+				 width:178px;
+				 height:43px;
+				 background:url('newpage/images/crazyflasehrlogo.png') no-repeat;
+				 margin-top:-35px;
+				 margin-left:20px;
+				 z-index:99;
+				 color:#939393;
+				 font-size:12px;
+				 font-weight:bold;
+				 font-family:'黑体';
+				 text-align:center;
+				 position:relative;
+				 _background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=image,src="newpage/images/crazyflasehrlogo.png");
+			}
+			.index_center_top_div_span
+			{
+				 color:#939393;
+				 font-size:12px;
+				 margion-top:30px;
+				 font-weight:bold;
+				 position:relative;
+				 margin-left:42px;
+				 font-family:'黑体';
+				 text-align:center;
+			}
+			.fengexian
+			{
+			 font-weight:bold;
+			}
+			.index_body .index_body_all .index_center .index_center_top ul li a
+			{
+				font-size:16px;
+				color:black;
+				padding-left:5px;
+				text-decoration:none;
+				font-family:'黑体';
+			}
+
+			.index_body .index_body_all .index_center .index_center_top ul li a:hover
+			{
+				font-size:16px;
+				color:white;
+				padding-left:5px;
+				text-decoration:none;
+				font-family:'黑体';
+			}
+
+			.index_body .index_body_all .index_center  .body_hr
+			{
+				width:100%;
+				height:2px;
+				font-size:0px;
+				margin-top:5px;
+				margin-left:2px;
+				margin-bottom:14px;
+				background:url('../images/hr.jpg') no-repeat;
+			}
+
+			.index_body .index_body_all .index_center  .index_center_content
+			{
+				width:880px;
+				margin:0 auto;
+			}
+			.index_body .index_body_all .index_center  .index_center_content .content_topbg
+			{
+				width:854px;
+				background:url("../images/content_topbg.jpg");
+				height:44px;
+				text-align:left;
+				color:white;
+				margin:0 auto;
+				font-size:16px;
+				font-weight:bold;
+				line-height:44px;
+			}
+			.index_body .index_body_all .index_center  .index_center_content .content_center
+			{
+				width:854px;
+				overflow:auto;
+				margin:0 auto;
+				background:url('../images/content_centerbg.jpg') repeat-y;
+			}
+			.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_top
+			{
+				width:854px;
+				height:10px;
+				font-size:0px;
+				background:url('../images/content_centertopbg.jpg') no-repeat;
+			}
+			.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_center
+			{
+				width:854px;
+				overflow:auto;
+				color:#ADADAD;
+				font-size:13px;
+			}
+			/*模版中新闻中间的内容层*/
+			.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_center .newstitle
+			{
+				font-size:18px;
+				color:#ffcd02;
+				height:60px;
+				font-family:'黑体';
+				line-height:60px;
+			}
+			.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_center .titlequyu
+			{
+				border-bottom:1px solid #212121;
+				text-align:center;
+				margin:0 auto;
+				line-height:30px;
+				height:30px;
+				width:70%;
+			}
+			.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_center  .newscontentinfo
+			{
+				clear:both;
+				width:70%;
+				margin:0 auto;
+				text-align:left;
+				line-height:24px;
+				overflow-y:atuo;
+				overflow-x:hidden;
+			}
+			.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_center .newscontentinfo a
+			{
+				text-decoration:none;
+				color:#ADADAD;
+				font-size:12px;
+				background:url('../images/tb_11.gif')  no-repeat left center;
+			}
+			.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_center .newscontentinfo a:hover
+			{
+				text-decoration:none;
+				color:white;
+				font-size:12px;
+			}
+			.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_center .nowfenpage
+			{
+				width:70%;
+				margin:0 auto;
+				text-align:left;
+				line-height:24px;
+				height:24px;
+			}
+			.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_center .nowfenpage a
+			{
+				text-decoration:none;
+				color:#ADADAD;
+				font-size:12px;
+			}
+			.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_center .nowfenpage a:hover
+			{
+				text-decoration:none;
+				color:white;
+				font-size:12px;
+			}
+			/*-----结束-----*/
+			.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_bottom
+			{
+				width:854px;
+				height:21px;
+				font-size:0px;
+				background:url('../images/content_centerbottombg.jpg') no-repeat;
+			}
+		
+			.boxsilhouette5
+			{
+				width:205px;
+				margin:0 auto;
+				height:8px;
+				font-size:0px;
+				 opacity:0.3;
+				 filter:alpha(opacity=30);
+				 background:black;
+			}
+		
+			.bottom_all
+			{
+				width:972px;
+				height:455px;
+				border-right:1px solid black;
+				border-bottom:1px solid black;
+			}
+			#bottom_all_ifrem
+			{
+				width:972px;
+				height:455px;
+			}
+		
+			

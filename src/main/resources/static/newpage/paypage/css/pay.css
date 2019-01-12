@@ -1,0 +1,73 @@
+
+.toptitle
+{
+	height:30px;
+	background:url('../image/tb_22.jpg') no-repeat bottom; 
+	width:578px; 
+	font-size:14px;
+	line-height:30px;
+}
+.toptitle p { 
+	background:url('../image/tb_21.jpg') no-repeat left center; 
+	height:30px;
+	margin-left:30px;
+	}
+.toptitle p span { color:#F00;font-weight:bold;height:30px;}
+.yhall
+{
+	display:inline-block;
+	background:url('../image/banks.jpg') no-repeat left top;
+	vertical-align:middle;
+}
+.bank_abc{ background-position: 0 0; width: 141px; height: 33px; } 
+.bank_abc_qy{ background-position: 0 -34px; width: 141px; height: 33px; } 
+.bank_bcom{ background-position: 0 -68px; width: 141px; height: 33px; } 
+.bank_bea{ background-position: 0 -102px; width: 141px; height: 33px; } 
+.bank_bjrcb{ background-position: 0 -136px; width: 141px; height: 33px; } 
+.bank_bob{ background-position: 0 -170px; width: 141px; height: 33px; } 
+.bank_boc{ background-position: 0 -204px; width: 141px; height: 33px; } 
+.bank_cbhb{ background-position: 0 -238px; width: 141px; height: 33px; } 
+.bank_ccb{ background-position: 0 -272px; width: 141px; height: 33px; } 
+.bank_ccb_qy{ background-position: 0 -306px; width: 141px; height: 33px; } 
+.bank_ceb{ background-position: 0 -340px; width: 141px; height: 33px; } 
+.bank_cib{ background-position: 0 -374px; width: 141px; height: 33px; } 
+.bank_citic{ background-position: 0 -408px; width: 141px; height: 33px; } 
+.bank_cmb{ background-position: 0 -442px; width: 141px; height: 33px; } 
+.bank_cmbc{ background-position: 0 -476px; width: 141px; height: 33px; } 
+.bank_czb{ background-position: 0 -510px; width: 141px; height: 33px; } 
+.bank_gdb{ background-position: 0 -544px; width: 141px; height: 33px; } 
+.bank_gzcb{ background-position: 0 -578px; width: 141px; height: 33px; } 
+.bank_gzrcc{ background-position: 0 -612px; width: 141px; height: 33px; } 
+.bank_hsb{ background-position: 0 -646px; width: 141px; height: 33px; } 
+.bank_hxb{ background-position: 0 -680px; width: 141px; height: 33px; } 
+.bank_hzb{ background-position: 0 -714px; width: 141px; height: 33px; } 
+.bank_icbc{ background-position: 0 -748px; width: 141px; height: 33px; } 
+.bank_icbc_qy{ background-position: 0 -782px; width: 141px; height: 33px; } 
+.bank_nbcb{ background-position: 0 -816px; width: 141px; height: 33px; } 
+.bank_njcb{ background-position: 0 -850px; width: 141px; height: 33px; } 
+.bank_pab{ background-position: 0 -884px; width: 141px; height: 33px; } 
+.bank_post{ background-position: 0 -918px; width: 141px; height: 33px; } 
+.bank_sdb{ background-position: 0 -952px; width: 141px; height: 33px; } 
+.bank_shb{ background-position: 0 -986px; width: 141px; height: 33px; } 
+.bank_shrcc{ background-position: 0 -1020px; width: 141px; height: 33px; } 
+.bank_spdb{ background-position: 0 -1054px; width: 141px; height: 33px; } 
+.bank_spdb_qy{ background-position: 0 -1088px; width: 141px; height: 33px; }
+.tables
+{
+	font-size:12px;
+}
+.moreall
+{
+	text-align:center;
+	background:url('../image/newpay_bg07.png') no-repeat center bottom;
+	padding-top:6px;
+	height:29px;
+}
+#surepayid
+{
+	border:0px;
+	width:114px;
+	cursor:pointer;
+	height:45px;
+	background: url('../image/tb_25.jpg') no-repeat;
+}

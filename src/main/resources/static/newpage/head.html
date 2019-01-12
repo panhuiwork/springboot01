@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>Andy law's Web</title>
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+		<meta http-equiv="description" content="this is my page">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link href="newpage/newcss/head.css" type="text/css" rel="stylesheet"></link>
+		<script>
+			$(function() {
+				var t;
+				$(".head_logo").mouseover(function() {
+					$(".head_titleline").show();
+				});
+				$(".head_titleline").mouseout(function() {
+					$(".head_titleline").hide();
+				})
+			
+				$("#loginbtn").click(function() {
+					$(".head_loginline").show();
+				});
+				$(".head_loginline").mouseover(function() {
+				//	$(".head_loginline").show();
+				})
+				$(".head_loginline").mouseout(function() {
+				//	$(".head_loginline").hide();
+				})
+				$("#bufe1").mouseover(function()
+				{
+					$(".head_loginline").hide();
+				});
+				$("#bufe2").mouseover(function()
+				{
+					$(".head_loginline").hide();
+				});
+				$("#bufe3").mouseover(function()
+				{
+					$(".head_loginline").hide();
+				});
+				
+				//登录的方法
+				$("#loginid").click(function() {
+					var usernames = $("#uname");
+					var userpasss = $("#upass");
+					var hanzi = /^[\u4e00-\u9fbf]+$/;
+					var cardnum = /^[0-9a-zA-Z]{6,16}$/;
+					var reg = /^\w{3,}@\w+(\.\w+)+$/;
+					if (usernames.val() == "") {
+						alert("账户不能为空,请重新输入!");
+						usernames.focus();
+						usernames.select();
+						return;
+					}
+					if (hanzi.test(usernames.val())) {
+						alert("账户不能为中文,请重新输入!");
+						usernames.focus();
+						usernames.select();
+						return;
+					}
+					if (!cardnum.test(usernames.val())) {
+						alert("账户不符合规则,请重新输入!");
+						usernames.focus();
+						usernames.select();
+						return;
+					}
+					if (userpasss.val() == "") {
+						alert("密码不能为空,请重新输入!");
+						userpasss.select();
+						userpasss.focus();
+						return;
+					}
+					if (hanzi.test(userpasss.val())) {
+						alert("密码不能为中文,请重新输入!");
+						userpasss.select();
+						userpasss.focus();
+						return;
+					}
+					if (!cardnum.test(userpasss.val())) {
+						alert("密码不符合规则,请重新输入!");
+						userpasss.select();
+						userpasss.focus();
+						return;
+					}
+			
+					$(".head_logincn").hide();
+					$("#bufe1").hide();
+					$("#bufe2").hide();
+					$("#bufe3").hide();
+					$(".loadding").show();
+					$.ajax( {
+						timeout : 6000,
+						url : "login_ajaxlogin.action",
+						type : 'post',
+						contentType : "application/x-www-form-urlencoded;charset=GBK",
+						data : {
+							"randoms" : Math.random(),
+							"sign" : $("#codevalue").val(),
+							"username" : $.trim($("#uname").val()),
+							"userpass" : $.trim($("#upass").val())
+						},
+						dataType : "json",
+						error : function() {
+							alert("服务器异常,请重新登录！");
+							$("#bufe1").show();
+								$("#bufe2").show();
+								$("#bufe3").show();
+							$(".head_logincn").show();
+							$(".loadding").hide();
+						},
+						success : function(ajaxdata) {
+							if (ajaxdata.res == 0) {
+								$("#fxurl").val(ajaxdata.url);
+								$("#unameid").html(ajaxdata.username);
+								$("#isloginid").show();
+								$(".head_loginline").hide();
+								$("#loginbtn").hide();
+								var date = new Date();
+								date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000));
+								$.cookie("username", $("#uname").val(), {
+									path : '/',
+									expires : date
+								});
+								$.cookie("userpass", $("#upass").val(), {
+									path : '/',
+									expires : date
+								});
+							} else if (ajaxdata.res == -1) {
+								alert("用户名不正确");
+								$("#bufe1").show();
+								$("#bufe2").show();
+								$("#bufe3").show();
+								$(".head_logincn").show();
+								$(".loadding").hide();
+							} else if (ajaxdata.res == -2) {
+								alert("密码格式不正确");
+								$("#bufe1").show();
+								$("#bufe2").show();
+								$("#bufe3").show();
+								$(".head_logincn").show();
+								$(".loadding").hide();
+							} else if (ajaxdata.res == -3) {
+								alert("登录失败");
+								$("#bufe1").show();
+								$("#bufe2").show();
+								$("#bufe3").show();
+								$(".head_logincn").show();
+								$(".loadding").hide();
+							} else if (ajaxdata.res == -4) {
+								alert("账户名或密码不正确");
+								$(".head_logincn").show();
+								$("#bufe1").show();
+								$("#bufe2").show();
+								$("#bufe3").show();
+								$(".loadding").hide();
+							} else if (ajaxdata.res == -5) {
+								alert("服务器繁忙,请稍候再试");
+								$("#bufe1").show();
+								$("#bufe2").show();
+								$("#bufe3").show();
+								$(".head_logincn").show();
+								$(".loadding").hide();
+							} else {
+								alert("系统错误");
+								$("#bufe1").show();
+								$("#bufe2").show();
+								$("#bufe3").show();
+								$(".head_logincn").show();
+								$(".loadding").hide();
+							}
+							$("#codevalue").val(ajaxdata.code);
+						}
+					});
+			
+				});
+			
+				var init = function() {
+					logininit();
+				}
+				//检查是否登陆
+				var logininit = function() {
+					if ($.cookie("username") == null) {
+						$(".savepass").show();
+						$(".suresavepass").hide();
+						checksave = false;
+					} else {
+						$(".suresavepass").show();
+						$(".savepass").hide();
+						checksave = true;
+						$("#upass").val($.cookie("userpass"));
+						$("#uname").val($.cookie("username"));
+					}
+					var Sys = {};
+					var ua = navigator.userAgent.toLowerCase();
+					var s;
+					(s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] : (s = ua
+							.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] : (s = ua
+							.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] : (s = ua
+							.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] : (s = ua
+							.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+					if (Sys.ie == "6.0") {
+						if (window
+								.confirm("尊敬的玩家请升级您的浏览器版本,当前浏览器版本过低将导致很多功能不能正常体验,点击确定跳转IE8下载页面，否则取消")) {
+							window.location.href = 'http://www.iefans.net/ie8-zhongwenban-guanfang-xiazai/';
+						}
+					}
+					$.ajax( {
+						timeout : 8000,
+						url : "login_ajaxinit.action",
+						type : 'post',
+						contentType : "application/x-www-form-urlencoded;charset=GBK",
+						data : {
+							"randoms" : Math.random(),
+							"sign" : $("#codevalue").val()
+						},
+						dataType : "json",
+						error : function() {
+						},
+						success : function(ajaxdata) {
+							if (ajaxdata.res == 0) {
+								$("#unameid").html(ajaxdata.username);
+								$("#isloginid").show();
+								$(".head_loginline").hide();
+								$("#loginbtn").hide();
+								$("#fxurl").val(ajaxdata.url);
+							} else {
+								$("#loginbtn").show();
+							}
+							$("#codevalue").val(ajaxdata.code);
+						}
+					});
+				}
+				$(".savepass").show();
+				var checksave = false;
+				$(".savepass").click(function() {
+					$(".suresavepass").show();
+					$(".savepass").hide();
+					var date = new Date();
+					date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000));
+					$.cookie("username", $("#uname").val(), {
+						path : '/',
+						expires : date
+					});
+					$.cookie("userpass", $("#upass").val(), {
+						path : '/',
+						expires : date
+					});
+					checksave = true;
+				});
+			$("#fenxiangid").click(function()
+			{
+				window.open($("#fxurl").val());
+			});
+			
+				$(".suresavepass").click(function() {
+					checksave = false;
+					$(".savepass").show();
+					$(".suresavepass").hide();
+					$.cookie("username", null, {
+						path : '/'
+					});
+					$.cookie("userpass", null, {
+						path : '/'
+					});
+				});
+				$(window).load(init);
+			});
+</script>
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		<META HTTP-EQUIV="Expires" CONTENT="-1">
+	</head>
+	<style>
+	body {
+		margin: 0; *
+		text-align: center;
+	}
+	</style>
+	<body>
+		<!--头部样式-->
+			<div class="all_head">
+				<div class="head_content">
+					<div class="head_logo">
+						<div class="head_titleline" id="headtitleid">
+							<div class="head_cn">
+								<div class="logoclick" onclick="window.open('http://andylaw.net')">
+								</div>	
+								<div class="head_cont">
+									<span class="head_cn_title">MAIN</span><br/>
+									<span class="head_link">
+										<a href="http://www.andylaw.net" target="_blank">首页</a>&nbsp;
+										<a href="http://www.andylaw.net:8080/skflashermsg/newpage/content/L201308131436205001.html" target="_blank">公告</a>&nbsp;
+										<a href="http://www.andylaw.net:8080/skflashermsg/myplace/place.jsp" target="_blank">个人中心</a>&nbsp;
+										<a href="http://pay.andylaw.net" target="_blank">充值</a>&nbsp;
+										<a href="http://www.crazyflasher.com/skflashermsg/luckgift/index.html" target="_blank">抽奖</a>
+									</span><br/>
+									<span class="head_cn_title">GAME</span><br/>
+									<span class="head_link">
+										<a href="http://game.andylaw.net/download.html" target="_blank">闪客快打8武装行客户端下载</a><br/>
+										<a href="http://game.andylaw.net/download.html" target="_blank">闪客快打7客户端下载</a>&nbsp;
+										<a href="http://www.andylaw.net/shan7.html" target="_blank">进入游戏</a>&nbsp;
+										<a href="http://www.crazyflasher.com/mercenaryempire/index.html" target="_blank">进入官网</a><br/>
+										<a href="http://www.crazyflasher.com/comic/comicedit.html" target="_blank">闪7漫画编辑器</a><br/>
+										<a href="http://www.andylaw.net/run2.html" target="_blank">闪客快跑2-疯狂跑酷</a>&nbsp;
+										<a href="http://www.andylaw.net/run2.html" target="_blank">进入游戏</a><br/><br/>
+										<a href="http://www.bbplayer.net/play/F20120319185227.html" target="_blank">闪客快打2</a><br/>
+										<a href="http://bbplayer.net/play/F20120315134915.html" target="_blank">闪客快打3-拼命之王</a><br/>
+										<a href="http://www.bbplayer.net/play/F20120316153628.html" target="_blank">闪客快打4-枪淋弹雨</a><br/>
+										<a href="http://bbplayer.net/play/F20120316153728.html" target="_blank">闪客快打5-超级英雄</a><br/>
+										<a href="http://bbplayer.net/play/F20120319171638.html" target="_blank">闪客快打6-毒刺任务</a>
+									</span><br/>
+									<span class="head_cn_title">LINKS</span><br/>
+									<span class="head_link">
+										<a href="http://bbplayer.net/" target="_blank">BBPlayer.net</a>&nbsp;<br/>
+										<a href="http://k5studio.com/" target="_blank">K5工作室</a>&nbsp;<br/>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="head_login"  style="width:300px;">
+							<span id="isloginid">欢迎你，<a href="http://www.andylaw.net:8080/skflashermsg/myplace/place.jsp" target="_blank" style="text-decoration: none"><span id="unameid">&nbsp;</span></a>&nbsp;<input type="button" onclick="window.open('http://www.andylaw.net:8080/skflashermsg/myplace/place.jsp')" class="btn" id="myplaceid" value="个人中心"/>&nbsp;<input type="button" class="btn" id="fenxiangid" value="分享赚K币"/></span><input type="button" class="btn" id="loginbtn" value="登录"/>
+							<div class="head_loginline">
+								<div id="bufe1"  style="width:50px;height:180px;float:left;">
+								</div>
+								<div class="head_logincn" style="float:left;float:left;margin-left:0;">
+										<table>
+											<tr>
+												<td align="right">
+													用户名：
+												</td>
+												<td>
+													<input type="text" name="username" id="uname" class="textstyle"/>
+												</td>
+												<td rowspan="2"><div id="loginid" class="loginbtnstyle"></div>
+												</td>
+											</tr>
+											<tr>
+												<td align="right">
+													密码：
+												</td>
+												<td>
+													<input type="password" name="userpass" id="upass"  class="textstyle" />
+												</td>
+											</tr>
+											<tr>
+												<td align="right">
+												&nbsp;
+												</td>
+												<td colspan="2">
+													<div class="savepass"></div>
+													<div class="suresavepass"></div>&nbsp;<span style="height:20px;line-height:20px;">保存密码</span>
+												</td>
+											</tr>
+											<tr>
+												<td>&nbsp;</td>
+												<td colspan="2">
+													<button class="surebutton" onclick="window.open('http://www.andylaw.net:8080/skflashermsg/findpassword.html')">找回密码</button>&nbsp;&nbsp;<button  class="surebutton" onclick="window.open('http://www.andylaw.net:8080/skflashermsg/refereeregistered.jsp')">注册</button>
+												</td>
+										</tr>
+									</table>					
+								</div>
+								<div id="bufe2" style="width:50px;height:180px;float:left;">
+								</div>
+								<div id="bufe3"  style="width:100%;height:40px;float:left;">
+								</div>
+								<div class="loadding" style="width:100%;height:40px;float:left;">登录中...</div>
+							</div>
+					</div>
+				</div>
+				<input type="hidden"  id="codevalue" value=""/>
+				<input type="hidden"  id="fxurl" value=""/>
+			</div>
+			<!--头部样式-->
+	</body>
+</html>

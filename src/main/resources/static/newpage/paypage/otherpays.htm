@@ -1,0 +1,328 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>其它点卡支付</title>
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+		<meta http-equiv="description" content="this is my page">
+		<meta http-equiv="content-type" content="text/html; charset=GBK">
+		<link rel="stylesheet" type="text/css" href="css/pay.css">
+		<script type="text/javascript" src="../js/jquery-1.6.2.min.js">
+</script>
+<script>
+$(function() {
+	var confroninfo="";
+		$(".yxkchange").mouseover(function(e)
+		{
+			switch(this.id.substr(10))
+			{
+			case "1":
+			confroninfo="【温馨提示】<br/>※盛大互动娱乐卡。<br/>※卡号15位的数字字母，密码8位或9位的阿拉伯数字。<br/>※请使用卡号以CSC5、CS、S、CA、CSB、YC、YD开头的“盛大互动娱乐卡”进行支付。 ";
+			break;
+		//	case "2":
+	//		confroninfo="【温馨提示】<br/>※Q币卡卡号9位的阿拉伯数字,密码12位的阿拉伯数字。 <br/>※请务必使用与您所选面额相同的Q币卡进行支付，否则您将承担因此而引起的交易失败或者交易金额丢失所造成的损失。";
+	//		//confroninfo="【温馨提示】<br/>※由于卡类提供商Q币卡一直处于维护阶段。<br/>※近期将暂停Q币卡类充值。";
+		//	break;
+		//	;
+			case "2":
+			confroninfo="【温馨提示】<br/>※卡号13位、密码10位的阿拉伯数字。<br/>※请务必使用与您所选择的面额相同的久游一卡通进行支付,否则引起的交易失败或交易金额丢失我方不予承担！ <br/>※不支持久游神兵卡、矩阵卡。";
+			break;
+		//	case "4":
+		//	confroninfo="【温馨提示】<br/>※卡号、密码都是16位的阿拉伯数字。 <br/>※不能使用特定游戏专属充值卡支付。 <br/>※在此使用过的骏网一卡通，卡内剩余J点只能在易宝支付合作商家进行支付使用。";
+		//	break;
+			case "3":
+			confroninfo="【温馨提示】<br/>※全国官方网易游戏充值卡。<br/>※卡号13位密码9位的数字。<br/>※请务必使用与您所选择的面额相同的网易一卡通进行支付,否则引起的交易失败或交易金额丢失,我方不予承担！ ";
+			break;
+			case "4":
+			confroninfo="【温馨提示】<br/>※全国官方征途游戏充值卡。<br/>※卡号16位阿拉伯数字，密码8位阿拉伯数字。<br/>※请务必使用与您所选择的面额相同的征途卡进行支付,否则引起的交易失败或交易金额丢失，我方不予承担！";
+			break;
+			case "5":
+			confroninfo="【温馨提示】<br/>※卡号前2位大写或小写英文字母,后10位或8位是数字。<br/>※密码15位或10位是纯数字。<br/>※天宏一卡通所有实卡的自发行日起，两年内有效。可多次充值，直至卡内余额为零。 ";
+			break;
+			//case "6":
+			//confroninfo="【温馨提示】<br/>※天下一卡通。<br/>※卡号是15位阿拉伯数字，密码是8位阿拉伯数字。 <br/>※天下一卡通支持是余额对转，余额对转是将一张卡内的余额转入或转入到另张一卡通上。";
+			//break;
+			case "6":
+			confroninfo="【温馨提示】<br/>※全国官方完美游戏充值卡。<br/>※卡号10位、密码15位的阿拉伯数字 <br/>※请务必使用与您所选择的面额相同的完美一卡通进行支付,否则引起的交易失败或交易金额丢失,我方不予承担！";
+			break;
+			case "7":
+			confroninfo="【温馨提示】<br/>※卡号与密码均为15位阿拉伯数字。<br/>※纵游一卡通支持分次消费直至卡内余额为0 。<br/>※纵游一卡通可以充值多款游戏，在纵游一卡通官方网站中搜索到的产品，都是可以用纵游一卡通来充值的。 ";
+			break;
+			case "8":
+			confroninfo="【温馨提示】<br/>※卡号20位、密码12位的阿拉伯数字。<br/>※请务必使用与您所选择的面额相同的搜狐一卡通进行支付,否则引起的交易失败或交易金额丢失,我方不予承担！<br/>※不支持搜狐矩阵卡。";
+			break;
+			case "9":
+			confroninfo="【温馨提示】<br/>※全国各地32一卡通，卡号：15位的阿拉伯数字、密码：10位的阿拉伯数字。<br/>※请务必使用与您所选择的面额相同的搜狐一卡通进行支付,否则引起的交易失败或交易金额丢失,我方不予承担！";
+			break;
+			case "10":
+			confroninfo="【温馨提示】<br/>※卡号15位、密码9位的阿拉伯数字。<br/>※请务必使用与您所选择的面额相同的玖佰一卡通进行支付,否则引起的交易失败或交易金额丢失，我方不予承担！";
+			break;
+			case "11":
+			confroninfo="【温馨提示】<br/>※Q币卡卡号9位的阿拉伯数字,密码12位的阿拉伯数字。 <br/>※请务必使用与您所选面额相同的Q币卡进行支付，否则您将承担因此而引起的交易失败或者交易金额丢失所造成的损失。";
+	//		//confroninfo="【温馨提示】<br/>※由于卡类提供商Q币卡一直处于维护阶段。<br/>※近期将暂停Q币卡类充值。";
+			break;
+			case "12":
+			confroninfo="【温馨提示】<br/>※新的卡面正在开发中。<br/>※谢谢各位玩家的支持。<br/>※如果充值遇到问题请查看充值帮助。<br/>※请注意上面的提示信息进行相应的操作。";
+			break;
+			}
+			$("#yxkintroduceshow").html(confroninfo);
+			$("#yxkintroduceshow").css({
+	     "top": e.pageY+5,"left": e.pageX-200}).show();
+			
+		});
+		$(".yxkchange").mouseout(function()
+		{
+			$("#yxkintroduceshow").hide();
+		});
+		
+		$("#cardchange").change(function()
+		{
+			$(".yxkchange").attr("id","yxkchengId"+(this.selectedIndex+1));
+			$("#yxkchengId"+(this.selectedIndex+1)).html(mypic(this.selectedIndex+1));
+		});
+		function mypic(a)
+		{
+			var imgsrc="";
+			switch(a)
+			{
+				case 1:
+				imgsrc="<img src='yxdkpic/yxdksd.jpg' alt='盛大游戏卡'/>";
+				break;
+				//case 2:
+			//	imgsrc="<img src='yxdkpic/yxdkqb.jpg' alt='Q币卡'/>";
+			//	break;
+				case 2:
+				imgsrc="<img src='yxdkpic/yxdkjy.jpg' alt='久游卡'/>";
+				break;
+			//	case 4:
+			//	imgsrc="<img src='yxdkpic/yxdkjw.jpg' alt='骏网一卡通'/>";
+			//	break;
+				case 3:
+				imgsrc="<img src='yxdkpic/yxdkwy.jpg' alt='网易一卡通'/>";
+				break;
+				case 4:
+				imgsrc="<img src='yxdkpic/yxdkjr.jpg' alt='征途'/>";
+				break;
+				case 5:
+				imgsrc="<img src='yxdkpic/yxdkth.jpg' alt='天宏一卡通'/>";
+				break;
+			//	case 6:
+			//	imgsrc="<img src='yxdkpic/yxdktxt.jpg' alt='天下一卡通'/>";
+			//	break;
+				case 6:
+				imgsrc="<img src='yxdkpic/yxdkwm.jpg' alt='完美卡'/>";
+				break;
+				case 7:
+				imgsrc="<img src='yxdkpic/yxdkzy.jpg' alt='纵游一卡通'/>";
+				break;
+				case 8:
+				imgsrc="<img src='yxdkpic/yxdksh.jpg' alt='搜狐一卡通'/>";
+				break;
+				case 9:
+				imgsrc="<img src='yxdkpic/32ka.jpg' alt='32一卡通'/>";
+				break;
+				case 10:
+				imgsrc="<img src='yxdkpic/jb.jpg' alt='玖佰卡'/>";
+				break;
+				case 11:
+				imgsrc="<img src='yxdkpic/yxdkqb.jpg' alt='Q币卡'/>";
+				break;
+			}
+			return imgsrc;
+		}
+});
+</script>
+<script type="text/javascript" src="../js/paychilds.js"></script>
+<style>
+.yxkchange
+{
+width:159px;
+height:83px;
+border:1px solid #A6A7A6;
+padding:1px;
+background: white;
+cursor:pointer;
+margin-top:24px;
+position:absolute;
+float:left;
+margin-left:420px;
+}
+.yxkchange img
+{
+width:129px;
+margin-left:15px;
+margin-top:9px;
+height:64px;
+}
+.yxkintroduce
+{
+width:300px;
+color:green;
+line-height:20px;
+padding:5px;
+border:1px solid gray;
+background:white;
+z-index:111111;
+display:none;
+position: absolute;
+font-size:12px;
+}
+</style>
+	</head>
+	<body bgcolor="#E3E0DB">
+	<form method="post" name="payform" id="myforms" action="../login_ipay.action" target="_blank">
+		<div class='yxkintroduce' id='yxkintroduceshow'></div>
+		<div class="toptitle">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;您当前选择的是"<span>其它点卡支付</span>"的充值方式</p>
+		</div>
+		<div class="yxkchange" id="yxkchengId1"><img src="yxdkpic/yxdksd.jpg" alt="盛大游戏卡"/></div>
+		<table border="0" class="tables">
+			<tr>
+				<td align="right" width="100">
+					<br/>充值到哪里：
+				</td>
+				<td><br/>
+					<input type="radio" class="rdochange" name="paychcanges" id="game" value="0" checked="checked" />
+					游戏直充
+					<input type="radio" class="rdochange" name="paychcanges" id="ipay" value="1"/>
+					充值到平台
+				</td>
+				<td width="300">&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					选择充值的卡类：
+				</td>
+				<td>
+					<select id="cardchange" name="paychannels">
+						<option value="SD">盛大游戏卡</option>
+						<!-- <option value="QQCARD">Q币卡</option> -->
+						<option value="JY">久游卡</option>
+						<!--<option value="JUNNET">骏网一卡通</option> -->
+						<option value="WY">网易卡</option>
+						<option value="ZT">征途游戏卡</option>
+						<option value="TH">天宏一卡通</option>
+						<option value="WM">完美一卡通</option>
+						<option value="ZY">纵游一卡通</option>
+						<option value="SH">搜狐畅游一卡通</option>
+						<option value="CARDTW">32一卡通</option>
+						<option value="JIUB">玖佰卡</option>
+						<option value="QQ">Q币卡</option> 
+					</select>
+				</td>
+				<td>
+					提示：右图详细
+				</td>
+			</tr>
+			<tr class="changegame">
+				<td align="right">
+					选择充入的游戏：
+				</td>
+				<td>
+					<select id="gameid"  name="gid">
+					</select>
+				</td>
+				<td>
+					提示：游戏选择
+				</td>
+			</tr>
+			<tr class="changeregion">
+				<td align="right">
+					选择游戏服务器：
+				</td>
+				<td>
+					<select id="regionid" name="region">
+					</select>
+				</td>
+				<td>
+					提示：大区选择
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					需要充值的账户：
+				</td>
+				<td>
+					<input type="text" name="player" id="playerid" maxlength="16"/>
+				</td>
+				<td>
+					提示：登录账户
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					确认充值的账户：
+				</td>
+				<td>
+					<input type="text" name="sureplayer" id="sureplayerid" maxlength="16"/>
+				</td>
+				<td>
+					提示：确认账户
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					请选择充值的金额：
+				</td>
+				<td colspan="2"><br/>
+					<input type="radio" name="paymoneyrado" value="10" class="paymoneyradoclass"/>10元<input type="radio" name="paymoneyrado" value="20" class="paymoneyradoclass"/>20元<input type="radio" checked="checked"  name="paymoneyrado" value="30" class="paymoneyradoclass"/>30元
+					<input type="radio" name="paymoneyrado"  value="40" class="paymoneyradoclass"/>40元<input type="radio" name="paymoneyrado"  value="50" class="paymoneyradoclass" class="paymoneyradoclass"/>50元<input type="radio" name="paymoneyrado"  value="100" class="paymoneyradoclass"/>100元
+					<input type="radio" name="paymoneyrado" value="1000" class="paymoneyradoclass"/>1000元<br/><input type="radio" name="paymoneyrado" value="0" class="paymoneyradoclass" id="paymoneyradoid"/>其它金额：<input type="text" name="getmoney" id="paymoneyid" maxlength="5"/><br/><br/>
+					&nbsp;您将获得<span id="showmoneyk" style="color:red;font-weight:bold;">0</span>K点+充值奖励(<span id="payjlid" style="color:red;font-weight:bold;">0</span>K)或<span id="showmoneyp" style="color:red;font-weight:bold;">0</span>平台币.<span style="color:red;font-weight:bold;">兑换比例：【1元=<span id="showkdian">0</span>K点或1元=<span id="showkkbi">0</span>K币】</span>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					请选择充值卡面额：
+				</td>
+				<td colspan="2">
+					<input type="radio" name="paymoney" value="5"/>5元<input type="radio" name="paymoney" value="10"/>10元<input type="radio" name="paymoney" value="15"/>15元<input type="radio" name="paymoney" value="20"/>20元<input type="radio" name="paymoney" value="30"  />30元<input type="radio" name="paymoney" value="50"  checked="checked"/>50元<input type="radio" name="paymoney" value="60"/>60元<input type="radio" name="paymoney" value="100"/>100元
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					充值卡序列号：
+				</td>
+				<td>
+					<input type="text" name="paycardid" maxlength="20"/>
+				</td>
+				<td>
+					提示：※请将鼠标放在右上角图片上查看详情
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					充值卡的密码：
+				</td>
+				<td>
+					<input type="text" name="paycardpass" maxlength="20"/>
+				</td>
+				<td>
+					提示：※同上
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					&nbsp;&nbsp;&nbsp;&nbsp;<font color="red"><b>提示：(必须与充值卡实际面额一致，否则支付失败且卡内余额丢失。如卡内余额丢失请联系易宝客服)</b></font>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3"><br/>
+					&nbsp;&nbsp;<input type="checkbox" id="agreenid"  checked="checked"/>&nbsp;同意并接受闪客平台游戏软件许可及服务协议.
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center"><br/>
+					<input type="button" id="surepayid" /><input type="hidden" value="K" id="pagetype"/><input type="hidden" name="paychange" value="NEWYB"/><input type="hidden" name="token" id="token" value=""/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3"><br/><font color="red">
+					&nbsp;&nbsp;*请充值时务必确认好您的充值金额准确无误再进行充值，避免输错金额导致的失误，
+					如因未仔细确认金额造成的充值问题，我们将一律不予处理此类退款申诉。</font><br/><br/>
+				</td>
+			</tr>
+		</table>
+	 </form>
+	</body>
+</html>

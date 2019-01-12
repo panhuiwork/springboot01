@@ -1,0 +1,13 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /geral
+
+spring:
+  messages:
+    basename: i18n.login
+  thymeleaf:
+    cache: false
+  mvc:
+    date-format: yyyy-MM-dd HH:mm
+#测试用的去除模板的缓存

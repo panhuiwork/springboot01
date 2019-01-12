@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>骏网一卡通充值</title>
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+		<meta http-equiv="description" content="this is my page">
+		<meta http-equiv="content-type" content="text/html; charset=GBK">
+		<link rel="stylesheet" type="text/css" href="css/pay.css">
+		<script type="text/javascript" src="../js/jquery-1.6.2.min.js">
+</script>
+<script type="text/javascript" src="../js/paychilds.js"></script>
+	</head>
+	<body bgcolor="#E3E0DB" >
+		<form method="post" name="payform" id="myforms" action="../login_ipay.action" target="_blank">
+		<div class="toptitle">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;您当前选择的是"<span>骏网一卡通充值</span>"的充值方式</p>
+		</div>
+		<table border="0" class="tables">
+			<tr>
+				<td align="right" width="100">
+					<br/>充值到哪里：
+				</td>
+				<td><br/>
+					<input type="radio" class="rdochange" name="paychcanges" id="game" value="0" checked="checked" />
+					游戏直充
+					<input type="radio" class="rdochange" name="paychcanges" id="ipay" value="1"/>
+					充值到平台
+				</td>
+				<td width="300">&nbsp;
+				</td>
+			</tr>
+			<tr class="changegame">
+				<td align="right">
+					选择充入的游戏：
+				</td>
+				<td>
+					<select id="gameid" name="gid">
+					</select>
+				</td>
+				<td>
+					提示：选择你要充值的游戏
+				</td>
+			</tr>
+			<tr class="changeregion">
+				<td align="right">
+					选择游戏服务器：
+				</td>
+				<td>
+					<select id="regionid" name="region">
+					</select>
+				</td>
+				<td>
+					提示：选择你要充值的游戏对应的区
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					需要充值的账户：
+				</td>
+				<td>
+					<input type="text" name="player" id="playerid" maxlength="16"/>
+				</td>
+				<td>
+					提示：请填写你的登录账户
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					确认充值的账户：
+				</td>
+				<td>
+					<input type="text" name="sureplayer" id="sureplayerid" maxlength="16"/>
+				</td>
+				<td>
+					提示：确认账户
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					请选择充值金额：
+				</td>
+				<td colspan="2"><br/>
+					<input type="radio" name="paymoneyrado" value="10" class="paymoneyradoclass"/>10元<input type="radio" name="paymoneyrado" value="20" class="paymoneyradoclass"/>20元<input type="radio"  checked="checked" name="paymoneyrado" value="30" class="paymoneyradoclass"/>30元
+					<input type="radio" name="paymoneyrado"  value="40" class="paymoneyradoclass"/>40元<input type="radio" name="paymoneyrado"  value="50" class="paymoneyradoclass" class="paymoneyradoclass"/>50元<input type="radio" name="paymoneyrado"  value="100" class="paymoneyradoclass"/>100元
+					<input type="radio" name="paymoneyrado" value="1000" class="paymoneyradoclass"/>1000元<br/><input type="radio" name="paymoneyrado" value="0" class="paymoneyradoclass" id="paymoneyradoid"/>其它金额：<input type="text" name="getmoney" id="paymoneyid" maxlength="5"/><br/><br/>
+					&nbsp;您将获得<span id="showmoneyk" style="color:red;font-weight:bold;">0</span>K点+充值奖励(<span id="payjlid" style="color:red;font-weight:bold;">0</span>K)或<span id="showmoneyp" style="color:red;font-weight:bold;">0</span>平台币.<span style="color:red;font-weight:bold;">兑换比例：【1元=<span id="showkdian">0</span>K点或1元=<span id="showkkbi">0</span>K币】</span>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					请选择充值卡面额：
+				</td>
+				<td colspan="2">
+					<input type="radio" name="paymoney" value="10"/>10元<input type="radio" name="paymoney" value="20" />20元<input type="radio" name="paymoney" value="30"/>30元<input type="radio" name="paymoney" value="50"  checked="checked"/>50元<input type="radio" name="paymoney" value="100"/>100元<input type="radio" name="paymoney" value="300"/>300元
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					充值卡序列号：
+				</td>
+				<td>
+					<input type="text" name="paycardid" maxlength="16"/>
+				</td>
+				<td>
+					提示：※卡号、密码都是16位的阿拉伯数字
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					充值卡的密码：
+				</td>
+				<td>
+					<input type="text" name="paycardpass" maxlength="16"/>
+				</td>
+				<td>
+					提示：同上
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					&nbsp;&nbsp;&nbsp;&nbsp;<font color="red"><b>提示：(必须与充值卡实际面额一致，否则支付失败且卡内余额丢失。如卡内余额丢失请联系易宝客服)</b></font>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3"><br/>
+					&nbsp;&nbsp;<input type="checkbox" id="agreenid"  checked="checked"/>&nbsp;同意并接受闪客平台游戏软件许可及服务协议.
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center"><br/>
+					<input type="button" id="surepayid" /><input type="hidden" value="I" id="pagetype"/><input type="hidden" name="paychannels" value="JW"/><input type="hidden" name="paychange" value="NEWYB"/><input type="hidden" name="token" id="token" value=""/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3"><br/><font color="red">
+					&nbsp;&nbsp;*请充值时务必确认好您的充值金额准确无误再进行充值，避免输错金额导致的失误，
+					如因未仔细确认金额造成的充值问题，我们将一律不予处理此类退款申诉。</font><br/><br/>
+				</td>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,6 @@
+body{margin:0px;background-color:#151515;color:#ADADAD;font-size:14px;*text-align:center;}
+.index_body{margin:0 auto;width:972px;text-align:center;}
+.index_body .newstitle{width:100%;height:80px;line-height:80px;font-size:18px;color:#f0c000;font-weight:bold;}
+.index_body .newstype{width:100%;height:50px;color:#adadad;font-size:12px;}
+.index_body .newstype span{color:#f0c000;}
+.index_body .newscont{width:100%;overflow:hidden;text-align:left;line-height:30px;}

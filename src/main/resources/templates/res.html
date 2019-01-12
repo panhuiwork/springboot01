@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>我在学模板</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- 读取静态配置文件的时候使用
+<link rel="stylesheet" type="text/css" media="all"
+href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" /> -->
+<link rel="stylesheet" type="text/css" href="css/panpan.css" /> 
+</head>
+<body>
+<h1>内容</h1>
+<!--th:text 将div里面的文本内容设置为值 -->
+<div th:text="${mytest}" id="css" th:id="${mytest}">xxxxxxxDA</div>
+<input type="text" name="x" th:value="${mytest}" />
+
+<input type="text" />
+
+
+<div th:text="${mytest}" >xxxxxxxDA</div>
+<div th:utext="${mytest}" >xxxxxxxDA</div>
+<div th:text="${mytest2}">33333</div>
+<div th:utext="${mytest2}">4444</div>
+<!-- <div th:text="${session.panpan.username}" >AA</div> -->
+<div th:utext="${#httpServletRequest.requestURL}">AAAA</div>
+<div th:utext="${#request.requestURL}">AAAA</div>
+<div th:utext="${#request.requestedSessionId}">AAAA</div>
+<div th:utext="${#locale.country}">AAAA</div>
+<div th:utext="${#strings.append(mytest2,'xxx')}">ABC</div>
+<div th:if="${session.panpan==null}">没有登录</div>
+<div th:if="${session.panpan}!=null" th:text="${#strings.append('欢迎登录，',session.panpan.username)}">已经登录</div>
+<div th:unless="${session.panpan==null}">${session.panpan.username}</div>
+	<br/>
+------------------第一种$循环方式方式-----------------------------
+	<br/>
+	<table>
+		<tr th:each="userinfo:${mylist}">
+			<td th:text="${userinfo.username}">0</td>
+			<td th:text="${userinfo.xxMethod()}">0</td>
+			<td th:text="${userinfo.userpass}">1</td>
+		</tr>
+	</table>
+	<br/>
+------------------第二种*循环方式方式-----------------------------
+<br/>
+<span th:each="userinfo:${mylist}" th:text="${userinfo.username}">没错就是我</span>&nbsp;<br/>
+<span th:each="userinfo:${mylist}">欢迎登录，，，[[${userinfo.username}]]</span>&nbsp;
+<br/>
+	<table>
+		<tr th:object="${session.panpan}">
+			<td th:text="*{username}">0</td>
+			<td th:text="*{xxMethod()}">0</td>
+			<td th:text="*{userpass}">1</td>
+		</tr>
+	</table>
+<a href="http://www.baidu.com" th:href="@{/helloworld}">我想点击进去看</a>
+-----------------------------片段文本号--------------------------------------
+<style>
+.xx
+{
+	width:800px;
+	height:50px;
+	color:red;
+	border:1px solid green;
+}
+.xx1
+{
+	width:600px;
+	height:30px;
+	color:red;
+	float:left;
+	border:1px solid yellow;
+}
+.xx1_1
+{
+	width:300px;
+	height:20px;
+	border:1px solid red;
+	overflow: hidden;
+}
+.xx2
+{
+	width:100px;
+	height:20px;
+	float:left;
+	border:1px solid blue;
+}
+</style>
+<div class="xx">
+	<div class="xx1" th:each="uino:${mylist}">
+		<div class="xx1_1">欢迎来到，[[${uino.username}]]</div>
+	</div>
+	<div class="xx2">
+		fdf
+	</div>
+</div>
+</body>
+</html>

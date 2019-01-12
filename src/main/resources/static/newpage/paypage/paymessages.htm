@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>移动大额短信</title>
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+		<meta http-equiv="description" content="this is my page">
+		<meta http-equiv="content-type" content="text/html; charset=GBK">
+
+		<link rel="stylesheet" type="text/css" href="css/pay.css">
+		<script type="text/javascript" src="../js/jquery-1.6.2.min.js">
+</script>
+<script type="text/javascript" src="../js/paychilds.js"></script>
+	</head>
+	<body bgcolor="#E3E0DB">
+		<form method="post" name="payform" id="myforms" action="../login_ipay.action" target="_blank">
+		<div class="toptitle">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;您当前选择的是"<span>V付宝手机快付支持(中国移动/中国电信/中国联通)</span>"的充值方式</p>
+		</div>
+		<table border="0" class="tables">
+			<tr>
+				<td align="right" width="100">
+					<br/>充值到哪里：
+				</td>
+				<td><br/>
+					<input type="radio" class="rdochange" name="paychcanges" id="game" value="0" checked="checked" />
+					游戏直充
+					<input type="radio" class="rdochange" name="paychcanges" id="ipay" value="1"/>
+					充值到平台
+				</td>
+				<td width="300">&nbsp;
+				</td>
+			</tr>
+			<tr class="changegame">
+				<td align="right">
+					选择充入的游戏：
+				</td>
+				<td>
+					<select id="gameid" name="gid">
+					</select>
+				</td>
+				<td>
+					提示：选择你要充值的游戏
+				</td>
+			</tr>
+			<tr class="changeregion">
+				<td align="right">
+					选择游戏服务器：
+				</td>
+				<td>
+					<select id="regionid" name="region">
+					</select>
+				</td>
+				<td>
+					提示：请玩家按照角色原本所在服务器进行充值
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					需要充值的账户：
+				</td>
+				<td>
+					<input type="text" name="player" id="playerid" maxlength="16"/>
+				</td>
+				<td>
+					提示：请填写你的登录账户
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					确认充值的账户：
+				</td>
+				<td>
+					<input type="text" name="sureplayer" id="sureplayerid" maxlength="16"/>
+				</td>
+				<td>
+					提示：确认账户
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					请选择充值金额：
+				</td>
+				<td colspan="2"><br/>
+					中国移动/中国电信：<input type="radio" name="paymoneyrado" value="5" class="paymoneyradoclass"/>5元<input type="radio" name="paymoneyrado" checked="checked" value="10" class="paymoneyradoclass"/>10元<input type="radio" name="paymoneyrado" checked="checked" value="15" class="paymoneyradoclass"/>15元<input type="radio" name="paymoneyrado" value="20" class="paymoneyradoclass"/>20元<input type="radio" name="paymoneyrado" checked="checked" value="30" class="paymoneyradoclass"/>30元
+					<br/>中国联通：<input type="radio" name="paymoneyrado" value="1" class="paymoneyradoclass"/>1元<input type="radio" name="paymoneyrado" value="2" class="paymoneyradoclass"/>&nbsp;2元<input type="radio" name="paymoneyrado" value="3" class="paymoneyradoclass"/>&nbsp;3元<input type="radio" name="paymoneyrado" value="4" class="paymoneyradoclass"/>&nbsp;4元<input type="radio" name="paymoneyrado" value="5" class="paymoneyradoclass"/>&nbsp;5元
+					<br/><input type="radio" name="paymoneyrado" value="0" class="paymoneyradoclass" id="paymoneyradoid" style="display:none;"/>&nbsp;充值金额：<input type="text" name="getmoney" id="paymoneyid" readonly="readonly" maxlength="5"/><br/><br/>
+					&nbsp;您将获得<span id="showmoneyk" style="color:red;font-weight:bold;">0</span>K点+充值奖励(<span id="payjlid" style="color:red;font-weight:bold;">0</span>K)或<span id="showmoneyp" style="color:red;font-weight:bold;">0</span>平台币.<span style="color:red;font-weight:bold;">兑换比例：【1元=<span id="showkdian">0</span>K点或1元=<span id="showkkbi">0</span>K币】</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3"><br/>
+					&nbsp;<input type="checkbox" id="agreenid"  checked="checked"/>同意并接受闪客平台游戏软件许可及服务协议.
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center"><br/>
+					<input type="button" id="surepayid" /><input type="hidden" value="E" id="pagetype"/><input type="hidden" name="paychannels" value=""/><input type="hidden" name="paychange" value="SJDX"/><input type="hidden" name="token" id="token" value=""/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3"><br/><font color="red">
+					&nbsp;*（1） 单部手机日限。每部手机每天只能购买60元。(联通用户每天只能购买46元）
+<br/>&nbsp;*（2） 单部手机月限。每部手机每月只能购买100元（个别号特殊情况下可以购买超过100）
+<br/>&nbsp;*（3） 单个面值每日限制。单个面值每天只能购买一次，最高30元(有的省份可根据时间地区情况做适当放开限制) 
+<br/>&nbsp;*（4） 用户IP地址与手机归属地必须一致才能买。 
+深圳盈华讯方7*24小时客服电话4006840755</font><br/><br/>
+				</td>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>

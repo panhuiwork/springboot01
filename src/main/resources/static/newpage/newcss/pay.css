@@ -1,0 +1,567 @@
+body{margin:0px;background-color:#151515;color:white;font-size:14px;*text-align:center;}
+.index_body{margin:0 auto;width:972px;text-align:center;position: relative;z-index:999;}
+.index_body .index_body_all .index_top {
+	width: 250px;
+	height: 33px;
+	background: url('../images/toptitle.jpg');
+	line-height: 28px;
+	color: white;
+}
+.shopgirl
+{
+	background:url('../nimg/shopgirl.png') no-repeat;
+	width:212px;
+	height:798px;
+	position:absolute;
+	margin-top:370px;
+	margin-left:-130px;
+	left:0;
+}
+.shopgirl1
+{
+	background:url('../nimg/shopgirl1.png') no-repeat;
+	width:121px;
+	height:136px;
+	position:absolute;
+	margin-top:531px;
+	margin-left:82px;
+	left:0;
+}
+/*这里是中间背景层*/
+.index_body .index_body_all .index_center {
+	margin: 0 auto;
+	background: url('../images/body_bg.jpg') repeat-y;
+	margin-top:4px;
+	text-align: center;
+}
+.index_body .index_body_all .index_center .index_center_ph1
+{
+	width: 973px;
+	height:25px;
+	background:url('../nimg/paytop.jpg') no-repeat;
+}
+ .index_center_ph2
+{
+	width: 973px;
+	height:65px;
+	background:url('../nimg/paybottn.jpg') no-repeat;
+}
+
+.index_body .index_body_all .index_center .index_center_top {
+	width: 972px;
+	text-align: center;
+	margin-left: 1px;
+	height: 42px;
+	background: url('../images/btn_list.jpg') no-repeat;
+}
+
+.index_body .index_body_all .index_center .index_center_top ul {
+	background: url('../images/title_list.jpg') no-repeat;
+	padding: 0;
+	margin: 4 2;
+	width: 972px;
+	float: left;
+}
+
+.index_body .index_body_all .index_center .index_center_top ul li {
+	float: left;
+	width: 119px;
+	height: 35px;
+	margin-top: 4px;
+	line-height: 32px;
+	font-size: 10px;
+	text-align: left;
+}
+
+.index_body .index_body_all .index_center .index_center_top ul li .index_center_top_div
+	{
+	width: 178px;
+	height: 43px;
+	background: url('../images/crazyflasehrlogo.png') no-repeat;
+	margin-top: -35px;
+	margin-left: 20px;
+	z-index: 99;
+	color: #939393;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: '黑体';
+	text-align: center;
+	position: relative;
+	_background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=image,src="images/crazyflasehrlogo.png");
+}
+
+.index_center_top_div_span {
+	color: #939393;
+	font-size: 12px;
+	margin-top: 30px;
+	font-weight: bold;
+	position: relative;
+	margin-left: 42px;
+	font-family: '黑体';
+	text-align: center;
+}
+
+.fengexian {
+	font-weight: bold;
+}
+
+.index_body .index_body_all .index_center .index_center_top ul li a {
+	font-size: 16px;
+	color: black;
+	padding-left: 5px;
+	text-decoration: none;
+	font-family: '黑体';
+}
+
+.index_body .index_body_all .index_center .index_center_top ul li a:hover
+	{
+	font-size: 16px;
+	color: white;
+	padding-left: 5px;
+	text-decoration: none;
+	font-family: '黑体';
+}
+
+.index_body .index_body_all .index_center  .body_hr {
+	width: 100%;
+	height: 2px;
+	font-size: 0px;
+	margin-top: 5px;
+	margin-left: 2px;
+	margin-bottom: 14px;
+	background: url('../images/hr.jpg') no-repeat;
+}
+
+.index_body .index_body_all .index_center  .index_center_content {
+	width: 880px;
+	margin: 0 auto;
+}
+
+.index_body .index_body_all .index_center  .index_center_content .content_topbg
+	{
+	width: 854px;
+	background: url("../images/content_topbg.jpg");
+	height: 44px;
+	text-align: left;
+	margin: 0 auto;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 44px;
+}
+
+.index_body .index_body_all .index_center  .index_center_content .content_center
+	{
+	width: 854px;
+	overflow: auto;
+	margin: 0 auto;
+	background: url('../images/content_centerbg.jpg') repeat-y;
+}
+
+.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_top
+	{
+	width: 854px;
+	height: 10px;
+	font-size: 0px;
+	background: url('../images/content_centertopbg.jpg') no-repeat;
+}
+
+.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_center
+	{
+	width: 854px;
+	overflow: auto;
+	color: #ADADAD;
+	font-size: 13px;
+}
+
+/*---充值中间---*/
+.content_center_center .leftnavigation {
+	background: #111111;
+	width: 190px;
+	margin-left: 20px;
+	float: left;
+}
+
+.content_center_center .leftnavigation .box {
+	background: url('../images/lefttitle2.jpg') no-repeat;
+	width: 190px;
+	height: 41px;
+	margin-top: 5px;
+	line-height: 38px;
+	cursor: pointer;
+	padding-left: 35px;
+	font-size: 14px;
+	text-align: left;
+	color: #CCCCCC;
+}
+
+.content_center_center .leftnavigation .box1 {
+	background: url('../images/lefttitle.jpg') no-repeat;
+	width: 190px;
+	height: 41px;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	color: black;
+	text-align: left;
+	line-height: 38px;
+	margin-top: 5px;
+	padding-left: 35px;
+}
+
+.content_center_center .rightifrem {
+	width: 620px;
+	float: left;
+}
+
+.content_center_center .rightifrem .paytop {
+	width: 620px;
+	height: 16px;
+	background: url('../images/pay_content_top.jpg') no-repeat;
+}
+
+.content_center_center .rightifrem .paycenter {
+	width: 620px;
+	background: #E3E0DB;
+}
+
+.content_center_center .rightifrem .paycenter #mypay {
+	width: 620px;
+}
+
+.content_center_center .rightifrem .paybottom {
+	width: 620px;
+	height: 14px;
+	background: url('../images/pay_content_bottom.jpg') no-repeat;
+}
+
+/*---充值结束---*/
+.index_body .index_body_all .index_center  .index_center_content .content_center .content_center_bottom
+	{
+	width: 854px;
+	height: 21px;
+	font-size: 0px;
+	background: url('../images/content_centerbottombg.jpg') no-repeat;
+}
+
+.boxsilhouette5 {
+	width: 205px;
+	margin: 0 auto;
+	height: 8px;
+	font-size: 0px;
+	opacity: 0.3;
+	filter: alpha(opacity = 30);
+	background: black;
+}
+
+.index_body .index_body_all .index_center  .index_center_bottom {
+	width: 854px;
+	margin: 0 auto;
+}
+
+.index_body .index_body_all .index_center  .index_center_bottom  .content_bottom_top
+	{
+	width: 854px;
+	height: 10px;
+	font-size: 0px;
+	background: url('../images/content_centertopbg.jpg') no-repeat;
+}
+
+.index_body .index_body_all .index_center  .index_center_bottom .content_bottom_center
+	{
+	width: 854px;
+	overflow: auto;
+	background: url('../images/content_centerbg.jpg') repeat-y;
+}
+
+.index_body .index_body_all .index_center  .index_center_bottom .content_bottom_center .boxtem
+	{
+	width: 204px;
+	height: 115px;
+	float: left;
+	line-height: 29px;
+	font-size: 14px;
+	color: #B8B8B8;
+	text-align: left;
+}
+
+.index_body .index_body_all .index_center  .index_center_bottom .content_bottom_center .boxtem span
+	{
+	font-size: 24px;
+	text-align: center;
+	color: #F7C601;
+}
+
+.index_body .index_body_all .index_center  .index_center_bottom .content_bottom_center .boxtem a
+	{
+	font-size: 14px;
+	color: #B8B8B8;
+	text-decoration: none;
+}
+
+.index_body .index_body_all .index_center  .index_center_bottom .content_bottom_center .boxtem a:hover
+	{
+	font-size: 14px;
+	color: white;
+	text-decoration: none;
+}
+
+.index_body .index_body_all .index_center  .index_center_bottom .content_bottom_center .hrf
+	{
+	width: 5px;
+	background: url('../images/hrf.jpg') no-repeat;
+	height: 115px;
+	float: left;
+}
+
+.index_body .index_body_all .index_center  .index_center_bottom  .content_bottom_bottom
+	{
+	width: 854px;
+	height: 21px;
+	font-size: 0px;
+	background: url('../images/content_centerbottombg.jpg') no-repeat;
+}
+
+.index_body .index_body_all .index_center .index_center_buttom {
+	width: 972px;
+	height: 398px;
+	margin-top: -12px;
+	background: url('../images/bottom_bg.jpg');
+}
+
+.index_body .index_body_all .index_center .index_center_buttom .center_buttom_onpice1
+	{
+	width: 100%;
+	height: 56px;
+	background: url('../images/logo_bg1.png');
+	_background: none;
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( enabled =
+		true, sizingMethod = image, src = "images/logo_bg1.png" );
+}
+
+.center_buttom_onpice1 .mylogo1 {
+	width: 50px;
+	height: 50px;
+	margin-left: 25px;
+	margin-top: 2px;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	background: url('../images/headlogo.png') no-repeat;
+	_background: none;
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( enabled =
+		true, sizingMethod = image, src = "images/headlogo.png" );
+}
+
+.center_buttom_onpice1 .mylogo2 {
+	width: 178px;
+	float: left;
+	margin-left: 25px;
+	margin-top: 3px;
+	height: 47px;
+	cursor: pointer;
+	position: relative;
+	background: url('../images/crazyflasehrlogo.png') no-repeat;
+	_background: none;
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( enabled =
+		true, sizingMethod = image, src = "images/crazyflasehrlogo.png" );
+}
+
+.center_buttom_onpice1 .mylogo3 {
+	width: 71px;
+	float: left;
+	height: 50px;
+	margin-left: 50px;
+	margin-top: 3px;
+	cursor: pointer;
+	position: relative;
+	background: url('../images/k5studiologo.png') no-repeat;
+	_background: none;
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( enabled =
+		true, sizingMethod = image, src = "images/k5studiologo.png" );
+}
+
+.center_buttom_onpice1 .mylogo4 {
+	width: 88px;
+	float: right;
+	height: 31px;
+	margin-top: 13px;
+	margin-right: 30px;
+	cursor: pointer;
+	position: relative;
+	background: url('../images/flashlogo.png') no-repeat;
+	_background: none;
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( enabled =
+		true, sizingMethod = image, src = "images/flashlogo.png" );
+}
+
+.center_buttom_onpice1 .mylogo5 {
+	width: 280px;
+	float: left;
+	height: 70px;
+	margin-left: 50px;
+	overflow: hidden;
+	position: relative;
+	margin-top: -12px;
+	cursor: pointer;
+	background: url('../images/flash_logo.png') no-repeat;
+	_background: none;
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( enabled =
+		true, sizingMethod = image, src = "images/flash_logo.png" );
+}
+
+.index_body .index_body_all .index_center .index_center_buttom  .buttom_kapio
+	{
+	padding-top: 23px;
+	width: 100%;
+}
+
+.manpop {
+	width: 446px;
+	height: 442px;
+	margin-top: -56px;
+	margin-left: 514px;
+	position: absolute;
+	background: url('../images/yongb.png') no-repeat;
+	_background: none;
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( enabled =
+		true, sizingMethod = image, src = "images/yongb.png" );
+}
+
+.index_body .index_body_all .index_center .index_center_buttom .center_buttom_onpice2
+	{
+	width: 100%;
+	height: 290px;
+	margin-top: 18px;
+	text-align: left;
+	background: url('../images/logo_bg2.png');
+	_background: none;
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( enabled =
+		true, sizingMethod = image, src = "images/logo_bg2.png" );
+}
+
+.center_buttom_onpice2 table {
+	width: 510px;
+	margin-left: 20px;
+	height: 100%;
+}
+
+.center_buttom_onpice2 table .tabtitle {
+	height: 38px;
+	line-height: 38px;
+	font-size: 15px;
+	color: white;
+	padding-left: 5px;
+	font-weight: bold;
+}
+
+.center_buttom_onpice2 table .tablink td {
+	height: 32px;
+	width: 100px;
+	background: url("../images/bottom_link_bg.jpg") no-repeat center left;
+	line-height: 32px;
+	position: relative;
+	font-size: 12px;
+	color: gray;
+}
+
+.center_buttom_onpice2 table  .tabbottom {
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #C6CDD5;
+}
+
+.center_buttom_onpice2 table .tabwould {
+	height: 20px;
+	line-height: 20px;
+	font-size: 13px;
+	color: gray;
+}
+
+.center_buttom_onpice2 table  td .tablink_line {
+	background: url('../images/bottom_line.jpg');
+	width: 2px;
+	height: 13px;
+	margin-left: 8px;
+	border: 1px solid white;
+	margin-right: 8px;
+}
+
+.center_buttom_onpice2 table .tablink a {
+	color: #ffcd02;
+	text-decoration: none;
+}
+
+.center_buttom_onpice2 table .tablink a:hover {
+	color: #CFE800;
+	text-decoration: none;
+}
+
+.statoge {
+	width: 16px;
+	height: 16px;
+	background: url('../k5image/star.png') no-repeat;
+	float: left;
+	_background: none;
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( enabled =
+		true, sizingMethod = image, src = "k5image/star.png" );
+}
+
+.bottom_all {
+	width: 972px;
+	height: 455px;
+	border-right: 1px solid black;
+}
+
+#bottom_all_ifrem {
+	width: 972px;
+	height: 455px;
+}
+
+#showmyhideen {
+	position: absolute;
+	z-index: 99999999;
+	width: 100%;
+	height: 200%;
+	*height: 200%;
+	background: #1E1E1E;
+	display: none;
+	left:0;
+}
+
+.mynamechange {
+	width: 520px;
+	height: 80px;
+	background: #666666;
+	border:2xp solid black;
+	color: black;
+	margin-top: 23%;
+	margin-left: 35%;
+	*margin-left: 8%;
+	text-align: center;
+}
+
+.mynamechange .showinfos {
+	width: 520px;
+	height: 60px;
+	padding-top: 20px;
+	
+}
+
+.mynamechange input {
+	color: black;
+	font-weight: bold;
+}
+
+.mynamechange .showinfos .surepay {
+	height: 33px;
+	cursor: pointer;
+	line-height: 18px;
+	width: 90px;
+	font-weight: bold;
+	border: 0px;
+	color: white;
+	background: url('../paypage/image/my-index-button.png');
+}

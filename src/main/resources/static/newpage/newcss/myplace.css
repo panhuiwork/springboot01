@@ -1,0 +1,28 @@
+body{margin:0px;background-color:#151515;color:white;font-size:14px;*text-align:center;}
+.index_body{margin:0 auto;width:972px;}
+.index_body .body_box1{width:100%;height:149px;margin-top:20px;}
+.index_body .body_box1 .box1_1{width:31px;height:149px;background:url('../nimg/place_topleft.jpg') no-repeat;float:left;}
+.index_body .body_box1 .box1_2{width:916px;height:149px;background:url('../nimg/place_top_bg.jpg') repeat-x;float:left;}
+.index_body .body_box1 .box1_2 .box1_2_1{width:247px;height:161px;background:url('../nimg/head.png') no-repeat;float:left;margin-top:-16px;}
+.index_body .body_box1 .box1_2 .box1_2_2{width:300px;height:149px;float:left;margin-left:20px;}
+.index_body .body_box1 .box1_2 .box1_2_2 table{width:100%;height:90%;color:#b2b2b2;font-size:14px;font-family:'Î¢ÈíÑÅºÚ';margin-top:5px;}
+.index_body .body_box1 .box1_2 .box1_2_2 table .uname{color:white;}
+.index_body .body_box1 .box1_2 .box1_2_2 table .gongxian{color:#00ccff;}
+.index_body .body_box1 .box1_2 .box1_2_2 table .money{color:#ffcd02;}
+.index_body .body_box1 .box1_2 .box1_2_2 table .referbtn{width:38px;height:25px;background:url('../nimg/referbtn.jpg') no-repeat;border:0px;cursor:pointer;}
+.index_body .body_box1 .box1_2 .box1_2_2 table .exitbtn{width:38px;height:25px;background:url('../nimg/exitbtn.jpg') no-repeat;border:0px;cursor:pointer;}
+.index_body .body_box1 .box1_2 .box1_2_2 table .paybtn{width:38px;height:24px;background:url('../nimg/paybtn.jpg') no-repeat;border:0px;cursor:pointer;}
+.index_body .body_box1 .box1_3{width:25px;height:149px;background:url('../nimg/place_top_right.jpg') no-repeat;float:left;}
+
+.index_body .body_box2{width:100%;margin-top:10px;height:357px;}
+.index_body .body_box2 .box2_1{width:285px;height:357px;float:left;}
+.index_body .body_box2 .box2_1 .box2_1_1{width:23px;height:357px;background:url('../nimg/myplace_center_leftbg2.jpg') no-repeat;float:left;}
+.index_body .body_box2 .box2_1 .box2_1_2{width:251px;height:357px;background:url('../nimg/myplace_center_leftbg1.jpg') repeat-x;float:left;line-height:30px;text-align:left;}
+.index_body .body_box2 .box2_1 .box2_1_2 a{text-decoration:none;color:#ADADAD;font-size:14px;background:url('../nimg/tb_11.gif')  no-repeat left center;padding-left:15px;}
+.index_body .body_box2 .box2_1 .box2_1_2 a:hover{text-decoration:none;color:white;font-size:14px;padding-left:15px;}
+.index_body .body_box2 .box2_1 .box2_1_3{width:11px;height:357px;background:url('../nimg/myplace_center_leftbg3.jpg') no-repeat;float:left;}
+
+.index_body .body_box2 .box2_2{width:675px;height:357px;float:right;}
+.index_body .body_box2 .box2_2 .box2_2_1{width:8px;height:357px;background:url('../nimg/myplace_center_rihgtbg1.jpg') no-repeat;float:left;}
+.index_body .body_box2 .box2_2 .box2_2_2{width:631px;height:357px;background:url('../nimg/myplace_center_leftbg1.jpg') repeat-x;float:left;overflow:hidden;}
+.index_body .body_box2 .box2_2 .box2_2_3{width:36px;height:357px;background:url('../nimg/myplace_center_rightbg3.jpg') no-repeat;float:left;}

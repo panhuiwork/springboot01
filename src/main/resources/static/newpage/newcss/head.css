@@ -1,0 +1,24 @@
+.all_head{width:100%;height:48px;background:url('../nimg/headimg/headbg.jpg') repeat-x;font-family:'Î¢ÈíÑÅºÚ';font-size:14px;color:white;}
+.all_head .head_content{width:972px;margin:0 auto;height:48px;}
+.all_head .head_content .head_logo{height:48px;width:178px;cursor:pointer;background:url('../nimg/headimg/newlogo.png');float:left;position: relative;z-index:9999}
+.all_head .head_content .head_login{height:23px;width:220px;float:right;margin-top:15px;text-align:right;font-size:11px;color:#f0c000;position: relative;z-index:9999}
+.all_head .head_content .head_login span{color:white;}
+.all_head .head_content .head_login span #unameid{color:#f0c000;}
+.all_head .head_content .head_login #isloginid{display:none;}
+.all_head .head_content .head_login .btn{height:23px;width:68px;color:black;line-height:23px;background:url('../nimg/headimg/btn_bg.png');border:0px;cursor:pointer;font-family:'Î¢ÈíÑÅºÚ';font-size:12px;font-weight:bold;}
+.all_head .head_content .head_titleline{width:384px;height:509px;display:none;position:absolute;top:0px;left:-90px;z-index: 9999;}
+.all_head .head_content .head_titleline .head_cn{width:284px;height:359px;background:url('../nimg/headimg/navigation.png') no-repeat;text-align: left;margin-left: 50px;*margin-left:0px;margin-top:43px;}
+.all_head .head_content .head_logo .logoclick{width:180px;height:47px;position:absolute;left:90;top:0;}
+.all_head .head_content .head_titleline .head_cn .head_cont{width:275px;height:300px;margin-left:12px;padding-top:18px;}
+.all_head .head_content .head_titleline .head_cn .head_cont	.head_cn_title{color:#555c34;font-family:'Î¢ÈíÑÅºÚ';font-size:18px;height:20px;overflow:hidden;}
+.all_head .head_content .head_titleline .head_cn .head_cont	.head_link a{color:#a9a9a9;font-family:'Î¢ÈíÑÅºÚ';font-size:14px;height:20px;line-height: 20px;text-decoration:none;overflow: hidden;}
+.all_head .head_content .head_titleline .head_cn .head_cont	.head_link a:hover{color:#c8e509;font-family:'Î¢ÈíÑÅºÚ';font-size:14px;height:20px;line-height: 20pxtext-decoration:none;overflow: hidden;}
+.all_head .head_content .head_loginline{width:384px;height:236px;background:url('../nimg/headimg/lgoin_consol.png') no-repeat center center;display:none;position:absolute;top:-15px;left:-10px;z-index: 9999;}
+.all_head .head_content .head_loginline	.loadding{text-align: center;margin-top:100px;display:none;}
+.all_head .head_content .head_loginline	.head_logincn{width:280px;height:112px;margin-top:68px;float:left;}
+.all_head .head_content .head_loginline	.head_logincn table{color:gray;margin:0 auto;font-size:12px;*width:100%;}
+.all_head .head_content .head_loginline	.head_logincn table	.textstyle{background:#343434;border-top:1px solid black;border-left:1px solid black;border-right:1px solid #515151;border-bottom:1px solid #515151;width:120px;height:20px;color:white;font-weight:bold;}
+.all_head .head_content .head_loginline	.head_logincn table .savepass{font-size:0px;width:16px;height:16px;background:#202020;border-top:1px solid black;border-left:1px solid black;border-right:1px solid #333333;cursor:pointer;border-bottom:1px solid #333333;float:left;display:none;}
+.all_head .head_content .head_loginline	.head_logincn table .suresavepass{font-size:0px;width:16px;height:16px;background-color:#202020;border-top:1px solid black;border-bottom:1px solid #515151;border-left:1px solid black;border-right:1px solid #515151;cursor:pointer;float:left;display:none;background:url('../nimg/headimg/cookiebtn.jpg') no-repeat;}
+.all_head .head_content .head_loginline	.head_logincn table .loginbtnstyle{width:46px;height:42px;background:url('../nimg/headimg/loginbtn.jpg');border:0px;cursor:pointer;}
+.all_head .head_content .head_loginline .head_logincn table .surebutton{background:url('../nimg/headimg/sure_botton.png');width:90px;border:0px;font-size:12px;color:gray;height:36px;cursor:pointer;position:relative;}
